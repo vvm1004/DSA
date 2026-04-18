@@ -5,16 +5,6 @@ class Node {
     }
 }
 
-// class CSLinkedList {
-//     constructor(value) {
-//         const newNode = new Node(value);
-//         newNode.next = newNode; 
-//         this.head = newNode;
-//         this.tail = newNode;
-//         this.length = 1;
-//     }   
-// }
-
 class CSLinkedList {
     constructor() {
         this.head = null;
