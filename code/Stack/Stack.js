@@ -1,0 +1,47 @@
+class Stack {
+    constructor() {
+        this.items = [];
+    }
+
+    push(element) {
+        this.items.push(element);
+    }
+
+    isEmpty() {
+        return this.items.length === 0;
+    }
+
+    toString() {
+        if(this.isEmpty()) {
+            return 'The Stack is empty';
+        }
+        return this.items.slice().reverse().join('\n');
+    }
+
+    pop(){
+        if(this.isEmpty()) {
+            return 'The Stack is empty';
+        }
+        return this.items.pop();
+    }
+
+    peek(){
+        if(this.isEmpty()) {
+            return 'The Stack is empty';
+        }  
+        return this.items[this.items.length - 1];
+    }
+
+    size(){
+        return this.items.length;
+    }
+
+    clear(){
+        this.items = [];
+    }
+}
+myStack = new Stack();
+myStack.push(1);
+myStack.push(2);
+myStack.push(3);
+console.log(myStack.toString()); 
